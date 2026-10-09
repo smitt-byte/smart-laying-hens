@@ -15,7 +15,9 @@ Kondisi lingkungan pada kandang ayam petelur sangat mempengaruhi tingkat stres d
 
 **Smart Laying Hens Cage** hadir sebagai solusi berbasis IoT yang menggunakan mikrokontroler **ESP32** sebagai otak utama. Data sensor dikirimkan secara cepat dan hemat daya menggunakan protokol komunikasi **MQTT**, lalu ditampilkan pada dashboard interaktif berbasis web yang dibangun dengan **Node-RED**. Sistem ini juga dilengkapi fitur **Over-The-Air (OTA)** untuk pembaruan kode secara nirkabel tanpa perlu melepas perangkat dari kandang.
 
-![Desain kandang](image/desain-kandang.png)
+<p align="center">
+  <img src="image/desain-kandang.png" alt="Desain kandang" width="700">
+</p>
 
 ---
 
