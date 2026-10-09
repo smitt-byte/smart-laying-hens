@@ -48,21 +48,7 @@ Kondisi lingkungan pada kandang ayam petelur sangat mempengaruhi tingkat stres d
 
 ## 🏗️ Arsitektur Sistem
 
-```text
-  +------------------+         MQTT         +-----------------+
-  |   Kandang Ayam   |  ----------------->  |   MQTT Broker   |
-  |  (ESP32 + Sensor)|  (Suhu,RH,Amonia)    | (Mosquitto/etc) |
-  +------------------+                      +-----------------+
-           ^                                         |
-           | Firmware                                | Data Stream
-           | Update (OTA)                            v
-  +------------------+                      +-----------------+
-  |   Developer/PC   |                      |    Node-RED     |
-  |   (Arduino IDE)  |                      | Dashboard Web UI|
-  +------------------+                      +-----------------+
-```
-
----
+![diagram blok](image/diagram blok.jpg)
 
 ## 🔌 Skema Pinout Singkat
 
