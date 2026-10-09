@@ -48,7 +48,7 @@ Kondisi lingkungan pada kandang ayam petelur sangat mempengaruhi tingkat stres d
 
 ## 🏗️ Arsitektur Sistem
 
-![diagram blok](image/diagram blok.jpg)
+![Diagram Blok](image/diagram%20blok.jpg)
 
 ## 🔌 Skema Pinout Singkat
 
