@@ -24,6 +24,7 @@ Kondisi lingkungan pada kandang ayam petelur sangat mempengaruhi tingkat stres d
 ## 🚀 Fitur Utama
 
 - **Monitoring Real-Time**: Memantau suhu, kelembapan, dan kadar gas amonia ($NH_3$) secara akurat.
+- **Kontrol Lingkungan**: Mengontrol suhu, dan kadar gas amonia ($NH_3$) sesuai parameter yang telah ditentukan.
 - **Komunikasi Ringan & Cepat (MQTT)**: Menggunakan sistem *Publish-Subscribe* untuk transmisi data yang responsif.
 - **Pembaruan Nirkabel (OTA - Over-The-Air)**: Memudahkan pemeliharaan perangkat lunak/firmware tanpa koneksi kabel fisik.
 - **Dashboard Web Interaktif (Node-RED)**: Visualisasi data berupa grafik, gauge, dan kontrol sistem yang user-friendly.
