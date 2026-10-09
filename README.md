@@ -83,37 +83,4 @@ Dashboard Node-RED memvisualisasikan parameter kandang secara intuitif:
 
 ---
 
-## 📦 Panduan Memulai (Quick Start)
 
-### 1. Flash Firmware ke ESP32
-1. Buka file `.ino` pada direktori firmware menggunakan **Arduino IDE**.
-2. Install library yang dibutuhkan melalui Library Manager:
-   - `DHT sensor library` by Adafruit
-   - `PubSubClient` (untuk MQTT)
-   - `ArduinoOTA` (untuk update via Wi-Fi)
-3. Sesuaikan konfigurasi Wi-Fi dan MQTT Broker pada file konfigurasi:
-   ```cpp
-   const char* ssid = "NAMA_WIFI_ANDA";
-   const char* password = "PASSWORD_WIFI";
-   const char* mqtt_server = "IP_OR_URL_BROKER";
-   ```
-4. Upload firmware pertama kali via kabel USB. Selanjutnya, pembaruan firmware dapat dilakukan via **OTA**.
-
-### 2. Setup Node-RED
-1. Jalankan server Node-RED Anda.
-2. Install modul `node-red-dashboard` jika belum terpasang.
-3. Import file `flows.json` yang ada di dalam repositori ini.
-4. Sesuaikan konfigurasi node MQTT Broker agar terhubung ke IP/Domain broker Anda.
-5. Klik **Deploy** dan akses dashboard di `http://localhost:1880/ui`.
-
----
-
-## 📝 Lisensi
-
-Proyek ini terlisensi di bawah [MIT License](LICENSE). Anda bebas mengembangkannya kembali untuk keperluan akademik maupun komersial.
-
----
-
-## 👨‍💻 Kontributor
-
-Dibuat dengan 💡 oleh **[Nama Anda]** – Silakan berikan 🌟 Star pada repositori ini jika menurut Anda bermanfaat!
