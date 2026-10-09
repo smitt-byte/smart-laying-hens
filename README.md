@@ -34,11 +34,14 @@ Kondisi lingkungan pada kandang ayam petelur sangat mempengaruhi tingkat stres d
 | **ESP32** | Mikrokontroler utama & modul Wi-Fi/Bluetooth |
 | **DHT22** | Sensor suhu dan kelembapan udara presisi tinggi |
 | **MQ-137** | Sensor khusus untuk mendeteksi konsentrasi gas Amonia ($NH_3$) |
-| **Power Supply 5V / Relay** | Adaptor daya dan kontrol aktuator (kipas/lampu jika ada) |
+| **Ceramic Heater** | Elemen pemanas keramik untuk menjaga suhu kandang tetap hangat. |
+| **Kipas Blower** | Kipas pembawa sirkulasi udara & pembuang amonia/panas berlebih. |
+| **Relay Module** | Sakelar elektronik untuk mengontrol aktuator bertegangan tinggi. |
+| **Power Supply** | Catu daya untuk ESP32 dan aktuator. |
 
 ### Software & Protokol
 - **Arduino IDE / PlatformIO**: Environment pemrograman firmware ESP32.
-- **MQTT Broker**: (Contoh: HiveMQ / Mosquitto / EMQX) sebagai perantara pesan.
+- **MQTT Broker**: (Contoh: HiveMQ / Mosquitto / EMQX) sebagai perantara pesan, disini saya menggunakan HiveMQ.
 - **Node-RED**: Platform pemrosesan data dan pembuat dashboard web.
 
 ---
