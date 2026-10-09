@@ -1,1 +1,119 @@
-# Smart Laying Hens Cage Using MQTT and OTA
+# 🐔 Smart Laying Hens Cage (Kandang Ayam Petelur Cerdas)
+
+[![Board](https://img.shields.io/badge/Main%20Controller-ESP32-blue.svg)](https://www.espressif.com/)
+[![Protocol](https://img.shields.io/badge/Protocol-MQTT-orange.svg)](https://mqtt.org/)
+[![Dashboard](https://img.shields.io/badge/Dashboard-Node--RED-red.svg)](https://nodered.org/)
+[![Firmware Update](https://img.shields.io/badge/Updates-OTA-green.svg)](#-teknologi-fitur-utama)
+
+Sistem pemantauan dan pengkondisian lingkungan kandang ayam petelur berbasis Internet of Things (IoT). Proyek ini dirancang untuk menjaga produktivitas dan kesehatan ayam petelur dengan mengukur temperatur, kelembapan, serta kadar gas amonia secara *real-time*.
+
+---
+
+## 📌 Deskripsi Proyek
+
+Kondisi lingkungan pada kandang ayam petelur sangat mempengaruhi tingkat stres dan produktivitas bertelur. Gas amonia yang berlebihan serta suhu/kelembapan yang tidak ideal dapat memicu penyakit respirasi pada ayam. 
+
+**Smart Laying Hens Cage** hadir sebagai solusi berbasis IoT yang menggunakan mikrokontroler **ESP32** sebagai otak utama. Data sensor dikirimkan secara cepat dan hemat daya menggunakan protokol komunikasi **MQTT**, lalu ditampilkan pada dashboard interaktif berbasis web yang dibangun dengan **Node-RED**. Sistem ini juga dilengkapi fitur **Over-The-Air (OTA)** untuk pembaruan kode secara nirkabel tanpa perlu melepas perangkat dari kandang.
+
+---
+
+## 🚀 Fitur Utama
+
+- **Monitoring Real-Time**: Memantau suhu, kelembapan, dan kadar gas amonia ($NH_3$) secara akurat.
+- **Komunikasi Ringan & Cepat (MQTT)**: Menggunakan sistem *Publish-Subscribe* untuk transmisi data yang responsif.
+- **Pembaruan Nirkabel (OTA - Over-The-Air)**: Memudahkan pemeliharaan perangkat lunak/firmware tanpa koneksi kabel fisik.
+- **Dashboard Web Interaktif (Node-RED)**: Visualisasi data berupa grafik, gauge, dan kontrol sistem yang user-friendly.
+
+---
+
+## 🛠️ Komponen Hardware & Software
+
+### Hardware
+| Komponen | Fungsi / Peran |
+| :--- | :--- |
+| **ESP32** | Mikrokontroler utama & modul Wi-Fi/Bluetooth |
+| **DHT22** | Sensor suhu dan kelembapan udara presisi tinggi |
+| **MQ-137** | Sensor khusus untuk mendeteksi konsentrasi gas Amonia ($NH_3$) |
+| **Power Supply 5V / Relay** | Adaptor daya dan kontrol aktuator (kipas/lampu jika ada) |
+
+### Software & Protokol
+- **Arduino IDE / PlatformIO**: Environment pemrograman firmware ESP32.
+- **MQTT Broker**: (Contoh: HiveMQ / Mosquitto / EMQX) sebagai perantara pesan.
+- **Node-RED**: Platform pemrosesan data dan pembuat dashboard web.
+
+---
+
+## 🏗️ Arsitektur Sistem
+
+```text
+  +------------------+         MQTT         +-----------------+
+  |   Kandang Ayam   |  ----------------->  |   MQTT Broker   |
+  |  (ESP32 + Sensor)|  (Suhu,RH,Amonia)    | (Mosquitto/etc) |
+  +------------------+                      +-----------------+
+           ^                                         |
+           | Firmware                                | Data Stream
+           | Update (OTA)                            v
+  +------------------+                      +-----------------+
+  |   Developer/PC   |                      |    Node-RED     |
+  |   (Arduino IDE)  |                      | Dashboard Web UI|
+  +------------------+                      +-----------------+
+```
+
+---
+
+## 🔌 Skema Pinout Singkat
+
+| Sensor | Pin Sensor | Pin ESP32 |
+| :--- | :--- | :--- |
+| **DHT22** | VCC | 3.3V / 5V |
+| | DATA | GPIO 4 |
+| | GND | GND |
+| **MQ-137** | VCC | 5V |
+| | AOUT (Analog) | GPIO 34 (ADC) |
+| | GND | GND |
+
+---
+
+## 🖥️ Integrasi Dashboard Node-RED
+
+Dashboard Node-RED memvisualisasikan parameter kandang secara intuitif:
+- **Gauge Suhu & Kelembapan**: Menampilkan status kenyamanan lingkungan ayam.
+- **Gauge Gas Amonia (PPM)**: Memberikan indikasi tingkat kebersihan udara dari kotoran ayam.
+- **Historical Chart**: Grafik riwayat data untuk analisis statistik periodik.
+
+---
+
+## 📦 Panduan Memulai (Quick Start)
+
+### 1. Flash Firmware ke ESP32
+1. Buka file `.ino` pada direktori firmware menggunakan **Arduino IDE**.
+2. Install library yang dibutuhkan melalui Library Manager:
+   - `DHT sensor library` by Adafruit
+   - `PubSubClient` (untuk MQTT)
+   - `ArduinoOTA` (untuk update via Wi-Fi)
+3. Sesuaikan konfigurasi Wi-Fi dan MQTT Broker pada file konfigurasi:
+   ```cpp
+   const char* ssid = "NAMA_WIFI_ANDA";
+   const char* password = "PASSWORD_WIFI";
+   const char* mqtt_server = "IP_OR_URL_BROKER";
+   ```
+4. Upload firmware pertama kali via kabel USB. Selanjutnya, pembaruan firmware dapat dilakukan via **OTA**.
+
+### 2. Setup Node-RED
+1. Jalankan server Node-RED Anda.
+2. Install modul `node-red-dashboard` jika belum terpasang.
+3. Import file `flows.json` yang ada di dalam repositori ini.
+4. Sesuaikan konfigurasi node MQTT Broker agar terhubung ke IP/Domain broker Anda.
+5. Klik **Deploy** dan akses dashboard di `http://localhost:1880/ui`.
+
+---
+
+## 📝 Lisensi
+
+Proyek ini terlisensi di bawah [MIT License](LICENSE). Anda bebas mengembangkannya kembali untuk keperluan akademik maupun komersial.
+
+---
+
+## 👨‍💻 Kontributor
+
+Dibuat dengan 💡 oleh **[Nama Anda]** – Silakan berikan 🌟 Star pada repositori ini jika menurut Anda bermanfaat!
