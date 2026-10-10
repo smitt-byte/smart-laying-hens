@@ -16,7 +16,7 @@ Kondisi lingkungan pada kandang ayam petelur sangat mempengaruhi tingkat stres d
 **Smart Laying Hens Cage** hadir sebagai solusi berbasis IoT yang menggunakan mikrokontroler **ESP32** sebagai otak utama. Data sensor dikirimkan secara cepat dan hemat daya menggunakan protokol komunikasi **MQTT**, lalu ditampilkan pada dashboard interaktif berbasis web yang dibangun dengan **Node-RED**. Sistem ini juga dilengkapi fitur **Over-The-Air (OTA)** untuk pembaruan kode secara nirkabel tanpa perlu melepas perangkat dari kandang.
 
 <p align="center">
-  <img src="image/desain-kandang.png" alt="Desain kandang" width="700">
+  <img src="image/desain-kandang.png" alt="Desain kandang" width="500">
 </p>
 
 ---
@@ -54,13 +54,13 @@ Kondisi lingkungan pada kandang ayam petelur sangat mempengaruhi tingkat stres d
 ## 🏗️ Arsitektur Sistem
 
 <p align="center">
-  <img src="image/diagram-blok.jpg" alt="Diagram Blok" width="700">
+  <img src="image/diagram-blok.jpg" alt="Diagram Blok" width="500">
 </p>
 
 ## 🔌 Skematik
 
 <p align="center">
-  <img src="image/circuit_image.png" alt="skematik" width="700">
+  <img src="image/circuit_image.png" alt="skematik" width="500">
 </p>
 
 
@@ -72,6 +72,10 @@ Dashboard Node-RED memvisualisasikan parameter kandang secara intuitif:
 - **Gauge Suhu & Kelembapan**: Menampilkan status kenyamanan lingkungan ayam.
 - **Gauge Gas Amonia (PPM)**: Memberikan indikasi tingkat kebersihan udara dari kotoran ayam.
 - **Historical Chart**: Grafik riwayat data untuk analisis statistik periodik.
+
+<p align="center">
+  <img src="image/dashboard.png" alt="dashboard" width="500">
+</p>
 
 ---
 
