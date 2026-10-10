@@ -60,7 +60,7 @@ Kondisi lingkungan pada kandang ayam petelur sangat mempengaruhi tingkat stres d
 ## 🔌 Skematik
 
 <p align="center">
-  <img src="circuit_image.png" alt="skematik" width="700">
+  <img src="image/circuit_image.png" alt="skematik" width="700">
 </p>
 
 
