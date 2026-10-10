@@ -75,8 +75,8 @@ Dashboard Node-RED menyediakan beberapa bagian kontrol dan monitoring visual:
    - *Gauge Amonia*: Menampilkan kadar amonia ($PPM$).
    - *Historical Chart*: Grafik tren data perubahan lingkungan secara berkala.
 2. **Indikator Status Kondisi**:
-   - *Status Suhu*: Indikator visual hijau/merah (*Suhu Baik / Suhu Buruk*).
-   - *Status Amonia*: Indikator visual (*Amonia Aman / Amonia Tinggi*).
+   - *Status Suhu*: Indikator visual hijau/merah (*Normal / Tinggi*).
+   - *Status Amonia*: Indikator visual (*Normal / Tinggi*).
 3. **Monitor Status Aktuator**:
    - Status **Ceramic Heater** (ON / OFF).
    - Status **Kipas Blower** (ON / OFF).
