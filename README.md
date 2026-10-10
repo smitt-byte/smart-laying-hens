@@ -3,7 +3,7 @@
 [![Board](https://img.shields.io/badge/Main%20Controller-ESP32-blue.svg)](https://www.espressif.com/)
 [![Protocol](https://img.shields.io/badge/Protocol-MQTT-orange.svg)](https://mqtt.org/)
 [![Dashboard](https://img.shields.io/badge/Dashboard-Node--RED-red.svg)](https://nodered.org/)
-[![Firmware Update](https://img.shields.io/badge/Updates-OTA-green.svg)](#-teknologi-fitur-utama)
+[![Firmware Update](https://img.shields.io/badge/Updates-OTA-green.svg)](https://cloud.arduino.cc/features-ota-updates/)
 
 Sistem pemantauan dan pengkondisian lingkungan kandang ayam petelur berbasis Internet of Things (IoT). Proyek ini dirancang untuk menjaga produktivitas dan kesehatan ayam petelur dengan mengukur temperatur, kelembapan, serta kadar gas amonia secara *real-time*.
 
