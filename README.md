@@ -57,16 +57,12 @@ Kondisi lingkungan pada kandang ayam petelur sangat mempengaruhi tingkat stres d
   <img src="image/diagram-blok.jpg" alt="Diagram Blok" width="700">
 </p>
 
-## 🔌 Skema Pinout Singkat
+## 🔌 Skematik
 
-| Sensor | Pin Sensor | Pin ESP32 |
-| :--- | :--- | :--- |
-| **DHT22** | VCC | 3.3V / 5V |
-| | DATA | GPIO 4 |
-| | GND | GND |
-| **MQ-137** | VCC | 5V |
-| | AOUT (Analog) | GPIO 34 (ADC) |
-| | GND | GND |
+<p align="center">
+  <img src="image/diagram-blok.jpg" alt="Diagram Blok" width="700">
+</p>
+
 
 ---
 
