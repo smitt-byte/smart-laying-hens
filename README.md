@@ -85,7 +85,7 @@ Dashboard Node-RED menyediakan beberapa bagian kontrol dan monitoring visual:
    - *Switch Manual Toggle*: Menyalakan atau mematikan lampu secara langsung dari aplikasi.
    - *Timer/Schedule Node*: Penjadwalan otomatis pencahayaan harian (misal: ON pukul 05.00 WIB, OFF pukul 21.00 WIB).
 5. **Tombol Google Sheets (Pencatatan Real-Time):**:
-   - *Button Node "Buka Google Sheets": Menghubungkan dashboard secara langsung ke tautan spreadsheet tempat penyimpanan log parameter sensor dan aktuator secara real-time.
+   - *Button Node "Buka Google Sheets": Menghubungkan dashboard secara langsung ke tautan spreadsheet tempat penyimpanan log suhu dan kadar gas amonia pada kandang ayam secara real-time.
      
 ---
 
