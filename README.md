@@ -66,12 +66,26 @@ Kondisi lingkungan pada kandang ayam petelur sangat mempengaruhi tingkat stres d
 
 ---
 
-## 🖥️ Integrasi Dashboard Node-RED
+## 🖥️ Antarmuka Dashboard Node-RED
 
-Dashboard Node-RED memvisualisasikan parameter kandang secara intuitif:
-- **Gauge Suhu & Kelembapan**: Menampilkan status kenyamanan lingkungan ayam.
-- **Gauge Gas Amonia (PPM)**: Memberikan indikasi tingkat kebersihan udara dari kotoran ayam.
-- **Historical Chart**: Grafik riwayat data untuk analisis statistik periodik.
+Dashboard Node-RED menyediakan beberapa bagian kontrol dan monitoring visual:
+
+1. **Parameter Lingkungan**:
+   - *Gauge Suhu & Kelembapan*: Menampilkan nilai temperatur ($^\circ\text{C}$) dan $\%RH$.
+   - *Gauge Amonia*: Menampilkan kadar amonia ($PPM$).
+   - *Historical Chart*: Grafik tren data perubahan lingkungan secara berkala.
+2. **Indikator Status Kondisi**:
+   - *Status Suhu*: Indikator visual hijau/merah (*Suhu Baik / Suhu Buruk*).
+   - *Status Amonia*: Indikator visual (*Amonia Aman / Amonia Tinggi*).
+3. **Monitor Status Aktuator**:
+   - Status **Ceramic Heater** (ON / OFF).
+   - Status **Kipas Blower** (ON / OFF).
+   - Status **Lampu Kandang** (ON / OFF).
+4. **Kendali Lampu Kandang**:
+   - *Switch Manual Toggle*: Menyalakan atau mematikan lampu secara langsung dari aplikasi.
+   - *Timer/Schedule Node*: Penjadwalan otomatis pencahayaan harian (misal: ON pukul 05.00 WIB, OFF pukul 21.00 WIB).
+
+---
 
 <p align="center">
   <img src="image/dashboard.png" alt="dashboard" width="500">
